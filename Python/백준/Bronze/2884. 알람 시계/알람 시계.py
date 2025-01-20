@@ -1,10 +1,12 @@
+def calculate_alarm_time(h, m):
+    m -= 45
+    if m < 0:
+        m += 60
+        h -= 1
+        if h < 0:
+            h += 24
+    return h, m
+
 H, M = map(int, input().split())
-M -= 45
-
-if (M < 0):
-	M += 60
-	H -= 1
-	if (H < 0):
-		H += 24;
-
+H, M = calculate_alarm_time(H, M)
 print(H, M)
