@@ -1,13 +1,11 @@
-H, M = map(int, input().split())
-m = int(input())
-H += m // 60
-M += m % 60
+def add_minutes_to_time(H, M, min_to_add):
+    H += min_to_add // 60
+    extra_hour, M = divmod(M + (min_to_add % 60), 60)
+    H += extra_hour
+    H %= 24
+    return H, M
 
-if M >= 60: 
-	H += 1
-	M -= 60
-
-if H >= 24:
-	H -= 24
-    
-print(H, M)
+A, B = map(int, input().split())
+C = int(input())
+A, B = add_minutes_to_time(A, B, C)
+print(A, B)
