@@ -1,5 +1,5 @@
-def add_two_numbers(T):
-    for _ in range(T):
+def add_two_numbers(case):
+    for _ in range(case):
         A, B = map(int, input().split())
         print(A + B)
 
