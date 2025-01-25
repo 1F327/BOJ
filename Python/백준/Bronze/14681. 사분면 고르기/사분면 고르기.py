@@ -1,9 +1,9 @@
-def get_quadrant(x, y):
-    if x > 0 and y > 0:
+def get_quadrant(a, b):
+    if a > 0 and b > 0:
         print("1")
-    elif x < 0 and y > 0:
+    elif a < 0 < b:
         print("2")
-    elif x < 0 and y < 0:
+    elif a < 0 and b < 0:
         print("3")
     else:
         print("4")
