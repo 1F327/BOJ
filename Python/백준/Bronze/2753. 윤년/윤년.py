@@ -1,8 +1,8 @@
 def is_leap_year(year):
     if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
-        print("1\n")
+        return 1
     else:
-        print("0\n")
+        return 0
 
 input_year = int(input())
-is_leap_year(input_year)
+print(is_leap_year(input_year))
