@@ -10,5 +10,5 @@ def determine_grade(score):
     else:
         print("F")
 
-score = int(input())
-determine_grade(score)
+user_score = int(input())
+determine_grade(user_score)
